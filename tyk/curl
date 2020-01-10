@@ -1,0 +1,68 @@
+curl -i -X POST \
+  --url http://localhost:8001/services/ \
+  --data 'name=example-service' \
+  --data 'url=http://localhost:8081/api/laptops'
+
+  curl -i -X POST http://localhost:8001/services/example-service/routes/ \
+    -d 'hosts[]=example.com' \
+    -d 'paths[]=/api/v1/laptops' \
+    -d 'methods[]=GET' \
+
+
+curl -i -X POST \
+  --url http://localhost:8001/services/ \
+  --data 'name=get-laptop-service' \
+  --data 'url=http://localhost:8081/api/laptop'
+
+
+curl -i -X POST --url http://localhost:8001/services/get-laptop-service/routes --data ‘paths=/api/laptop’    
+
+  curl -i -X POST http://localhost:8001/services/get-laptop-service/routes/ \
+    -d 'hosts[]=example.com' \
+    -d 'paths[]=/api/v1/laptop' \
+    -d 'methods[]=GET' \
+
+     curl -X POST http://localhost:8001/routes/37b94f34-a249-49dd-bb16-b3f720817bac/plugins \
+--data "name=cors"  \
+--data "config.origins=*" \
+--data 'config.methods= ' \
+--data "config.headers=Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Auth-Token"\
+--data "config.exposed_headers=X-Auth-Token" \
+--data "config.credentials=true" \
+--data "config.max_age=3600" \
+
+
+  
+  kong-dashboard start \
+  --kong-url http://localhost:8001 \
+  --port 3001
+
+  curl -i -X POST \
+  --url http://localhost:8001/services/example-service/routes \
+  --data 'hosts[]=example.com'
+
+  docker run -d --name kong-database \
+               --network=host \
+               -p 5432:5432 \
+               -e "POSTGRES_USER=kong" \
+               -e "POSTGRES_DB=kong" \
+               postgres:9.6
+
+               docker run --rm \
+     --network=host \
+     -e "KONG_DATABASE=postgres" \
+     -e "KONG_PG_HOST=kong-database" \
+     -e "KONG_CASSANDRA_CONTACT_POINTS=kong-database" \
+     kong:latest kong migrations bootstrap
+    
+curl -X POST http://localhost:8001/services/example-service/plugins \
+    --data "name=kong-spec-expose"  \
+    --data "config.spec_url=https://github.com/OAI/OpenAPI-Specification/blob/master/examples/v2.0/json/petstore.json"
+
+
+
+
+
+
+
+

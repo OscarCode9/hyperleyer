@@ -1,0 +1,135 @@
+[36m2020-01-06 16:03:43.049 UTC [viperutil] getKeysRecursively -> DEBU 001[0m Found map[string]interface{} value for peer.BCCSP
+[36m2020-01-06 16:03:43.049 UTC [viperutil] unmarshalJSON -> DEBU 002[0m Unmarshal JSON: value cannot be unmarshalled: invalid character 'S' looking for beginning of value
+[36m2020-01-06 16:03:43.049 UTC [viperutil] getKeysRecursively -> DEBU 003[0m Found real value for peer.BCCSP.Default setting to string SW
+[36m2020-01-06 16:03:43.050 UTC [viperutil] getKeysRecursively -> DEBU 004[0m Found map[string]interface{} value for peer.BCCSP.SW
+[36m2020-01-06 16:03:43.050 UTC [viperutil] getKeysRecursively -> DEBU 005[0m Found map[string]interface{} value for peer.BCCSP.SW.FileKeyStore
+[36m2020-01-06 16:03:43.050 UTC [viperutil] unmarshalJSON -> DEBU 006[0m Unmarshal JSON: value cannot be unmarshalled: unexpected end of JSON input
+[36m2020-01-06 16:03:43.050 UTC [viperutil] getKeysRecursively -> DEBU 007[0m Found real value for peer.BCCSP.SW.FileKeyStore.KeyStore setting to string 
+[36m2020-01-06 16:03:43.050 UTC [viperutil] unmarshalJSON -> DEBU 008[0m Unmarshal JSON: value cannot be unmarshalled: invalid character 'S' looking for beginning of value
+[36m2020-01-06 16:03:43.050 UTC [viperutil] getKeysRecursively -> DEBU 009[0m Found real value for peer.BCCSP.SW.Hash setting to string SHA2
+[36m2020-01-06 16:03:43.050 UTC [viperutil] unmarshalJSON -> DEBU 00a[0m Unmarshal JSON: value is not a string: 256
+[36m2020-01-06 16:03:43.050 UTC [viperutil] getKeysRecursively -> DEBU 00b[0m Found real value for peer.BCCSP.SW.Security setting to int 256
+[36m2020-01-06 16:03:43.050 UTC [viperutil] getKeysRecursively -> DEBU 00c[0m Found map[string]interface{} value for peer.BCCSP.PKCS11
+[36m2020-01-06 16:03:43.050 UTC [viperutil] getKeysRecursively -> DEBU 00d[0m Found map[string]interface{} value for peer.BCCSP.PKCS11.FileKeyStore
+[36m2020-01-06 16:03:43.051 UTC [viperutil] unmarshalJSON -> DEBU 00e[0m Unmarshal JSON: value is not a string: <nil>
+[36m2020-01-06 16:03:43.051 UTC [viperutil] getKeysRecursively -> DEBU 00f[0m Found real value for peer.BCCSP.PKCS11.FileKeyStore.KeyStore setting to <nil> <nil>
+[36m2020-01-06 16:03:43.051 UTC [viperutil] unmarshalJSON -> DEBU 010[0m Unmarshal JSON: value is not a string: <nil>
+[36m2020-01-06 16:03:43.051 UTC [viperutil] getKeysRecursively -> DEBU 011[0m Found real value for peer.BCCSP.PKCS11.Library setting to <nil> <nil>
+[36m2020-01-06 16:03:43.051 UTC [viperutil] unmarshalJSON -> DEBU 012[0m Unmarshal JSON: value is not a string: <nil>
+[36m2020-01-06 16:03:43.051 UTC [viperutil] getKeysRecursively -> DEBU 013[0m Found real value for peer.BCCSP.PKCS11.Label setting to <nil> <nil>
+[36m2020-01-06 16:03:43.051 UTC [viperutil] unmarshalJSON -> DEBU 014[0m Unmarshal JSON: value is not a string: <nil>
+[36m2020-01-06 16:03:43.052 UTC [viperutil] getKeysRecursively -> DEBU 015[0m Found real value for peer.BCCSP.PKCS11.Pin setting to <nil> <nil>
+[36m2020-01-06 16:03:43.052 UTC [viperutil] unmarshalJSON -> DEBU 016[0m Unmarshal JSON: value is not a string: <nil>
+[36m2020-01-06 16:03:43.052 UTC [viperutil] getKeysRecursively -> DEBU 017[0m Found real value for peer.BCCSP.PKCS11.Hash setting to <nil> <nil>
+[36m2020-01-06 16:03:43.052 UTC [viperutil] unmarshalJSON -> DEBU 018[0m Unmarshal JSON: value is not a string: <nil>
+[36m2020-01-06 16:03:43.052 UTC [viperutil] getKeysRecursively -> DEBU 019[0m Found real value for peer.BCCSP.PKCS11.Security setting to <nil> <nil>
+[36m2020-01-06 16:03:43.052 UTC [viperutil] EnhancedExactUnmarshalKey -> DEBU 01a[0m map[peer.BCCSP:map[Default:SW SW:map[FileKeyStore:map[KeyStore:] Hash:SHA2 Security:256] PKCS11:map[Security:<nil> FileKeyStore:map[KeyStore:<nil>] Library:<nil> Label:<nil> Pin:<nil> Hash:<nil>]]]
+[36m2020-01-06 16:03:43.052 UTC [bccsp_sw] openKeyStore -> DEBU 01b[0m KeyStore opened at [/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/apple.antonio.com/users/Admin@apple.antonio.com/msp/keystore]...done
+[36m2020-01-06 16:03:43.053 UTC [bccsp] initBCCSP -> DEBU 01c[0m Initialize BCCSP [SW]
+[36m2020-01-06 16:03:43.053 UTC [msp] getPemMaterialFromDir -> DEBU 01d[0m Reading directory /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/apple.antonio.com/users/Admin@apple.antonio.com/msp/signcerts
+[36m2020-01-06 16:03:43.053 UTC [msp] getPemMaterialFromDir -> DEBU 01e[0m Inspecting file /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/apple.antonio.com/users/Admin@apple.antonio.com/msp/signcerts/Admin@apple.antonio.com-cert.pem
+[36m2020-01-06 16:03:43.053 UTC [msp] getPemMaterialFromDir -> DEBU 01f[0m Reading directory /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/apple.antonio.com/users/Admin@apple.antonio.com/msp/cacerts
+[36m2020-01-06 16:03:43.053 UTC [msp] getPemMaterialFromDir -> DEBU 020[0m Inspecting file /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/apple.antonio.com/users/Admin@apple.antonio.com/msp/cacerts/ca.apple.antonio.com-cert.pem
+[36m2020-01-06 16:03:43.053 UTC [msp] getPemMaterialFromDir -> DEBU 021[0m Reading directory /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/apple.antonio.com/users/Admin@apple.antonio.com/msp/admincerts
+[36m2020-01-06 16:03:43.053 UTC [msp] getPemMaterialFromDir -> DEBU 022[0m Inspecting file /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/apple.antonio.com/users/Admin@apple.antonio.com/msp/admincerts/Admin@apple.antonio.com-cert.pem
+[36m2020-01-06 16:03:43.053 UTC [msp] getPemMaterialFromDir -> DEBU 023[0m Reading directory /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/apple.antonio.com/users/Admin@apple.antonio.com/msp/intermediatecerts
+[36m2020-01-06 16:03:43.053 UTC [msp] getMspConfig -> DEBU 024[0m Intermediate certs folder not found at [/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/apple.antonio.com/users/Admin@apple.antonio.com/msp/intermediatecerts]. Skipping. [stat /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/apple.antonio.com/users/Admin@apple.antonio.com/msp/intermediatecerts: no such file or directory]
+[36m2020-01-06 16:03:43.053 UTC [msp] getPemMaterialFromDir -> DEBU 025[0m Reading directory /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/apple.antonio.com/users/Admin@apple.antonio.com/msp/tlscacerts
+[36m2020-01-06 16:03:43.053 UTC [msp] getPemMaterialFromDir -> DEBU 026[0m Inspecting file /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/apple.antonio.com/users/Admin@apple.antonio.com/msp/tlscacerts/tlsca.apple.antonio.com-cert.pem
+[36m2020-01-06 16:03:43.053 UTC [msp] getPemMaterialFromDir -> DEBU 027[0m Reading directory /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/apple.antonio.com/users/Admin@apple.antonio.com/msp/tlsintermediatecerts
+[36m2020-01-06 16:03:43.053 UTC [msp] getMspConfig -> DEBU 028[0m TLS intermediate certs folder not found at [/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/apple.antonio.com/users/Admin@apple.antonio.com/msp/tlsintermediatecerts]. Skipping. [stat /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/apple.antonio.com/users/Admin@apple.antonio.com/msp/tlsintermediatecerts: no such file or directory]
+[36m2020-01-06 16:03:43.053 UTC [msp] getPemMaterialFromDir -> DEBU 029[0m Reading directory /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/apple.antonio.com/users/Admin@apple.antonio.com/msp/crls
+[36m2020-01-06 16:03:43.053 UTC [msp] getMspConfig -> DEBU 02a[0m crls folder not found at [/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/apple.antonio.com/users/Admin@apple.antonio.com/msp/crls]. Skipping. [stat /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/apple.antonio.com/users/Admin@apple.antonio.com/msp/crls: no such file or directory]
+[36m2020-01-06 16:03:43.053 UTC [msp] getMspConfig -> DEBU 02b[0m MSP configuration file not found at [/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/apple.antonio.com/users/Admin@apple.antonio.com/msp/config.yaml]: [stat /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/apple.antonio.com/users/Admin@apple.antonio.com/msp/config.yaml: no such file or directory]
+[36m2020-01-06 16:03:43.053 UTC [msp] newBccspMsp -> DEBU 02c[0m Creating BCCSP-based MSP instance
+[36m2020-01-06 16:03:43.053 UTC [msp] New -> DEBU 02d[0m Creating Cache-MSP instance
+[36m2020-01-06 16:03:43.054 UTC [msp] loadLocaMSP -> DEBU 02e[0m Created new local MSP
+[36m2020-01-06 16:03:43.054 UTC [msp] Setup -> DEBU 02f[0m Setting up MSP instance appleMSP
+[36m2020-01-06 16:03:43.054 UTC [msp/identity] newIdentity -> DEBU 030[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICSDCCAe6gAwIBAgIRALAvsjHy1JnQWSvnN1GrMy8wCgYIKoZIzj0EAwIwdTEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xGjAYBgNVBAoTEWFwcGxlLmFudG9uaW8uY29tMR0wGwYDVQQDExRj
+YS5hcHBsZS5hbnRvbmlvLmNvbTAeFw0yMDAxMDYxNTUwMDBaFw0zMDAxMDMxNTUw
+MDBaMHUxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQH
+Ew1TYW4gRnJhbmNpc2NvMRowGAYDVQQKExFhcHBsZS5hbnRvbmlvLmNvbTEdMBsG
+A1UEAxMUY2EuYXBwbGUuYW50b25pby5jb20wWTATBgcqhkjOPQIBBggqhkjOPQMB
+BwNCAARhkmSezZYo13UiRAJQBZugiSvjjpZFyUCVbwnIsoINwuMNtrxD+ZyZ0avL
+0lUFwpbTjuOObJc46k8Oq6QCAOQ8o18wXTAOBgNVHQ8BAf8EBAMCAaYwDwYDVR0l
+BAgwBgYEVR0lADAPBgNVHRMBAf8EBTADAQH/MCkGA1UdDgQiBCDrTAiYYiFAUVFC
+BqeyPvKjOzVEW0M9UR6EvlE1WjNhdjAKBggqhkjOPQQDAgNIADBFAiEA9J3Na78O
+bxkgsfmagOlxO5gHueGeEzzFgcWh29jhkLMCIALSIKFe6DwdW8XsKbt17tx7G9DM
+7mpB0gn6JfhgV1qd
+-----END CERTIFICATE-----
+[36m2020-01-06 16:03:43.054 UTC [msp/identity] newIdentity -> DEBU 031[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICLjCCAdSgAwIBAgIRAL0fVHvf2nG7CLUWjENtEx8wCgYIKoZIzj0EAwIwdTEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xGjAYBgNVBAoTEWFwcGxlLmFudG9uaW8uY29tMR0wGwYDVQQDExRj
+YS5hcHBsZS5hbnRvbmlvLmNvbTAeFw0yMDAxMDYxNTUwMDBaFw0zMDAxMDMxNTUw
+MDBaMG0xCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQH
+Ew1TYW4gRnJhbmNpc2NvMQ8wDQYDVQQLEwZjbGllbnQxIDAeBgNVBAMMF0FkbWlu
+QGFwcGxlLmFudG9uaW8uY29tMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEcSDk
+dRTGC98jv6kznTLAI9dnqFk9mLqYFgs60FlR6g2QfzWunQstxbvd4NL0jvy1/G11
+8axDVWfA3Hg/Mt49QaNNMEswDgYDVR0PAQH/BAQDAgeAMAwGA1UdEwEB/wQCMAAw
+KwYDVR0jBCQwIoAg60wImGIhQFFRQgansj7yozs1RFtDPVEehL5RNVozYXYwCgYI
+KoZIzj0EAwIDSAAwRQIhAMWjZ8pb6SL+25JIM5QGDNSZcJZN3H16HfuAP8GshXQO
+AiBvSySEplS4OyxIz4hyy55nXJVedjCNZNHH5HF+f8ll4A==
+-----END CERTIFICATE-----
+[36m2020-01-06 16:03:43.078 UTC [msp/identity] newIdentity -> DEBU 032[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICLjCCAdSgAwIBAgIRAL0fVHvf2nG7CLUWjENtEx8wCgYIKoZIzj0EAwIwdTEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xGjAYBgNVBAoTEWFwcGxlLmFudG9uaW8uY29tMR0wGwYDVQQDExRj
+YS5hcHBsZS5hbnRvbmlvLmNvbTAeFw0yMDAxMDYxNTUwMDBaFw0zMDAxMDMxNTUw
+MDBaMG0xCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQH
+Ew1TYW4gRnJhbmNpc2NvMQ8wDQYDVQQLEwZjbGllbnQxIDAeBgNVBAMMF0FkbWlu
+QGFwcGxlLmFudG9uaW8uY29tMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEcSDk
+dRTGC98jv6kznTLAI9dnqFk9mLqYFgs60FlR6g2QfzWunQstxbvd4NL0jvy1/G11
+8axDVWfA3Hg/Mt49QaNNMEswDgYDVR0PAQH/BAQDAgeAMAwGA1UdEwEB/wQCMAAw
+KwYDVR0jBCQwIoAg60wImGIhQFFRQgansj7yozs1RFtDPVEehL5RNVozYXYwCgYI
+KoZIzj0EAwIDSAAwRQIhAMWjZ8pb6SL+25JIM5QGDNSZcJZN3H16HfuAP8GshXQO
+AiBvSySEplS4OyxIz4hyy55nXJVedjCNZNHH5HF+f8ll4A==
+-----END CERTIFICATE-----
+[36m2020-01-06 16:03:43.078 UTC [bccsp_sw] loadPrivateKey -> DEBU 033[0m Loading private key [18c29ed31ca3d5c64badd818dc03590b25851b9a8e55bf6906f67de7b9fed567] at [/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/apple.antonio.com/users/Admin@apple.antonio.com/msp/keystore/18c29ed31ca3d5c64badd818dc03590b25851b9a8e55bf6906f67de7b9fed567_sk]...
+[36m2020-01-06 16:03:43.079 UTC [msp/identity] newIdentity -> DEBU 034[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICLjCCAdSgAwIBAgIRAL0fVHvf2nG7CLUWjENtEx8wCgYIKoZIzj0EAwIwdTEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xGjAYBgNVBAoTEWFwcGxlLmFudG9uaW8uY29tMR0wGwYDVQQDExRj
+YS5hcHBsZS5hbnRvbmlvLmNvbTAeFw0yMDAxMDYxNTUwMDBaFw0zMDAxMDMxNTUw
+MDBaMG0xCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQH
+Ew1TYW4gRnJhbmNpc2NvMQ8wDQYDVQQLEwZjbGllbnQxIDAeBgNVBAMMF0FkbWlu
+QGFwcGxlLmFudG9uaW8uY29tMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEcSDk
+dRTGC98jv6kznTLAI9dnqFk9mLqYFgs60FlR6g2QfzWunQstxbvd4NL0jvy1/G11
+8axDVWfA3Hg/Mt49QaNNMEswDgYDVR0PAQH/BAQDAgeAMAwGA1UdEwEB/wQCMAAw
+KwYDVR0jBCQwIoAg60wImGIhQFFRQgansj7yozs1RFtDPVEehL5RNVozYXYwCgYI
+KoZIzj0EAwIDSAAwRQIhAMWjZ8pb6SL+25JIM5QGDNSZcJZN3H16HfuAP8GshXQO
+AiBvSySEplS4OyxIz4hyy55nXJVedjCNZNHH5HF+f8ll4A==
+-----END CERTIFICATE-----
+[36m2020-01-06 16:03:43.079 UTC [msp] setupSigningIdentity -> DEBU 035[0m Signing identity expires at 2030-01-03 15:50:00 +0000 UTC
+[36m2020-01-06 16:03:43.079 UTC [msp] Validate -> DEBU 036[0m MSP appleMSP validating identity
+[36m2020-01-06 16:03:43.081 UTC [grpc] Printf -> DEBU 037[0m parsed scheme: ""
+[36m2020-01-06 16:03:43.081 UTC [grpc] Printf -> DEBU 038[0m scheme "" not registered, fallback to default scheme
+[36m2020-01-06 16:03:43.081 UTC [grpc] Printf -> DEBU 039[0m ccResolverWrapper: sending new addresses to cc: [{peer0.apple.antonio.com:7051 0  <nil>}]
+[36m2020-01-06 16:03:43.081 UTC [grpc] Printf -> DEBU 03a[0m ClientConn switching balancer to "pick_first"
+[36m2020-01-06 16:03:43.081 UTC [grpc] Printf -> DEBU 03b[0m pickfirstBalancer: HandleSubConnStateChange: 0xc4204fe8c0, CONNECTING
+[36m2020-01-06 16:03:43.084 UTC [grpc] Printf -> DEBU 03c[0m pickfirstBalancer: HandleSubConnStateChange: 0xc4204fe8c0, READY
+[36m2020-01-06 16:03:43.085 UTC [grpc] Printf -> DEBU 03d[0m parsed scheme: ""
+[36m2020-01-06 16:03:43.085 UTC [grpc] Printf -> DEBU 03e[0m scheme "" not registered, fallback to default scheme
+[36m2020-01-06 16:03:43.085 UTC [grpc] Printf -> DEBU 03f[0m ccResolverWrapper: sending new addresses to cc: [{peer0.apple.antonio.com:7051 0  <nil>}]
+[36m2020-01-06 16:03:43.085 UTC [grpc] Printf -> DEBU 040[0m ClientConn switching balancer to "pick_first"
+[36m2020-01-06 16:03:43.085 UTC [grpc] Printf -> DEBU 041[0m pickfirstBalancer: HandleSubConnStateChange: 0xc42017dfc0, CONNECTING
+[36m2020-01-06 16:03:43.087 UTC [grpc] Printf -> DEBU 042[0m pickfirstBalancer: HandleSubConnStateChange: 0xc42017dfc0, READY
+[36m2020-01-06 16:03:43.088 UTC [msp] GetDefaultSigningIdentity -> DEBU 043[0m Obtaining default signing identity
+2020-01-06 16:03:43.088 UTC [chaincodeCmd] checkChaincodeCmdParams -> INFO 044[0m Using default escc
+2020-01-06 16:03:43.088 UTC [chaincodeCmd] checkChaincodeCmdParams -> INFO 045[0m Using default vscc
+[36m2020-01-06 16:03:43.088 UTC [chaincodeCmd] getChaincodeSpec -> DEBU 046[0m java chaincode disabled
+[36m2020-01-06 16:03:43.137 UTC [golang-platform] getCodeFromFS -> DEBU 047[0m getCodeFromFS github.com/hyperledger/fabric/examples/chaincode/go/chaincode_tutorial
+[36m2020-01-06 16:03:43.308 UTC [golang-platform] func1 -> DEBU 048[0m Discarding GOROOT package bytes
+[36m2020-01-06 16:03:43.308 UTC [golang-platform] func1 -> DEBU 049[0m Discarding GOROOT package encoding/json
+[36m2020-01-06 16:03:43.308 UTC [golang-platform] func1 -> DEBU 04a[0m Discarding GOROOT package fmt
+[36m2020-01-06 16:03:43.308 UTC [golang-platform] func1 -> DEBU 04b[0m Discarding provided package github.com/hyperledger/fabric/core/chaincode/shim
+[36m2020-01-06 16:03:43.308 UTC [golang-platform] func1 -> DEBU 04c[0m Discarding provided package github.com/hyperledger/fabric/protos/peer
+[36m2020-01-06 16:03:43.308 UTC [golang-platform] func1 -> DEBU 04d[0m Discarding GOROOT package strconv
+[36m2020-01-06 16:03:43.308 UTC [golang-platform] GetDeploymentPayload -> DEBU 04e[0m done
+[36m2020-01-06 16:03:43.308 UTC [container] WriteFileToPackage -> DEBU 04f[0m Writing file to tarball: src/github.com/hyperledger/fabric/examples/chaincode/go/chaincode_tutorial/chaincode_tutorial.go
+[36m2020-01-06 16:03:43.309 UTC [msp/identity] Sign -> DEBU 050[0m Sign: plaintext: 0ABD070A5C08031A0C08DFB4CDF00510...C4F6EF000000FFFF2FBF698F001A0000 
+[36m2020-01-06 16:03:43.309 UTC [msp/identity] Sign -> DEBU 051[0m Sign: digest: A67162ED04DE18DCAB0E23AFE2C8CFF835D6CF008ED8F91E21FA57D8537B4136 
+2020-01-06 16:03:43.314 UTC [chaincodeCmd] install -> INFO 052[0m Installed remotely response:<status:200 payload:"OK" > 

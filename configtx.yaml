@@ -1,0 +1,95 @@
+# Copyright IBM Corp. All Rights Reserved.
+#
+# SPDX-License-Identifier: Apache-2.0
+# -----------------------------------------
+# Modificado por Antonio Paya
+# -----------------------------------------
+
+---
+
+Organizations:
+
+    - &OrdererOrg
+        Name: OrdererOrg
+        ID: OrdererMSP
+        MSPDir: crypto-config/ordererOrganizations/antonio.com/msp
+
+    - &microsoft
+        Name: microsoftMSP
+        ID: microsoftMSP
+        MSPDir: crypto-config/peerOrganizations/microsoft.antonio.com/msp
+        AnchorPeers:
+            - Host: peer0.microsoft.antonio.com
+              Port: 7051
+
+    - &apple
+        Name: appleMSP
+        ID: appleMSP
+        MSPDir: crypto-config/peerOrganizations/apple.antonio.com/msp
+        AnchorPeers:
+            - Host: peer0.apple.antonio.com
+              Port: 7051
+
+
+Orderer: &OrdererDefaults
+
+    # Tipos disponibles:  "solo" o "kafka", "solo" para debug
+    OrdererType: solo
+
+    Addresses:
+        - orderer.antonio.com:7050
+
+    BatchTimeout: 2s
+
+    BatchSize:
+        MaxMessageCount: 10
+        AbsoluteMaxBytes: 99 MB
+        PreferredMaxBytes: 512 KB
+
+    Kafka:
+        Brokers:
+            - 127.0.0.1:9092
+
+    Organizations:
+
+
+Application: &ApplicationDefaults
+
+    Organizations:
+
+Capabilities:
+
+    Global: &ChannelCapabilities
+        V1_1: true
+
+    Orderer: &OrdererCapabilities
+        V1_1: true
+
+    Application: &ApplicationCapabilities
+        V1_1: true
+
+Profiles:
+
+    LaptopsOrdererGenesis:
+        Capabilities:
+            <<: *ChannelCapabilities
+        Orderer:
+            <<: *OrdererDefaults
+            Organizations:
+                - *OrdererOrg
+            Capabilities:
+                <<: *OrdererCapabilities
+        Consortiums:
+            LaptopsConsortium:
+                Organizations:
+                    - *microsoft
+                    - *apple
+    laptopschannel:
+        Consortium: LaptopsConsortium
+        Application:
+            <<: *ApplicationDefaults
+            Organizations:
+                - *microsoft
+                - *apple
+            Capabilities:
+                <<: *ApplicationCapabilities
